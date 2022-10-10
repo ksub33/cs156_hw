@@ -6,4 +6,5 @@ import random
 import time
 
 print("hello world")
+print(3)
 
