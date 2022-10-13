@@ -9,8 +9,8 @@ N = 100
 def pick_point():
   return np.random.uniform(-1.0, 1.0), np.random.uniform(-1.0, 1.0)
 
-def make_line()pick_point:
-  p1 = ()
+def make_line():
+  p1 = pick_point()
   p2 = pick_point()
   m = (p2[1] - p1[1])/(p2[0] - p1[0])
   b = (p1[1] - m*p1[0])
@@ -33,6 +33,9 @@ def generate_rand_data(n):
   # n * 3 matrix, have two x entries because d = 2, first entry is classification
   X = np.random.rand(n, 3) * 2 - 1
   X[:, 0] = 1
+  
+  #(1, x1, y1)
+  #(1, m, b)
 
   Y = np.dot(X, w)
   
