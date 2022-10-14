@@ -2,10 +2,7 @@ from re import I
 import matplotlib.pyplot as plt
 import numpy as np
 import random
-# import pandas as pd
 import time
-
-# prob the worst code ive ever written, horribly slow
 
 def coinFlips(num_flips, times):
   exp_arr = np.empty([times, num_flips])
@@ -52,9 +49,9 @@ v1_avg = np.sum(v1_arr)/total_size
 vrand_avg = np.sum(vrand_arr)/total_size
 vmin_avg = np.sum(vmin_arr)/total_size
 
-print(v1_avg)
-print(vrand_avg)
-print(vmin_avg)
+print(f"v_1 is {v1_avg}")
+print(f"v rand is {vrand_avg}")
+print(f"v min is {vmin_avg}")
 
 axs[0].plot(x, v1_arr)
 axs[1].plot(x, vrand_arr)
